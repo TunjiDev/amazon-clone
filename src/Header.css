@@ -1,0 +1,145 @@
+.header {
+  background-color: #131921;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__collapsedMenu > img {
+  object-fit: contain;
+  width: 50px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.header__collapsedMenu,
+input[type="checkbox"] {
+  display: none;
+}
+
+.header__logo {
+  object-fit: contain;
+  width: 100px;
+  margin: 0px 20px;
+  margin-top: 18px;
+  cursor: pointer;
+}
+
+.header__search {
+  display: flex;
+  flex: 1;
+  /* align-items: center; */
+}
+
+.header__searchInput {
+  height: 24px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+.header__searchIcon {
+  /* padding: 5px; */
+  background-color: #cd9042;
+  height: 24px !important;
+  cursor: pointer;
+}
+
+.headerNav {
+  display: flex;
+  justify-content: space-evenly;
+  /* flex: 1; */
+}
+
+.header__Link {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header__option {
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 10px;
+  margin-right: 10px; */
+}
+
+.header__optionLineOne {
+  font-size: 10px;
+}
+
+.header__optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header__optionBasket {
+  display: flex;
+  align-items: center;
+}
+
+.header__basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* =========================================== 500 PX AND LOWER SCREENS ==================================== */
+
+@media (max-width: 500px) {
+  .header {
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .header__collapsedMenu,
+  input[type="checkbox"] {
+    position: absolute;
+    top: 10px;
+  }
+
+  .header__collapsedMenu {
+    display: block;
+  }
+
+  .header__logoLink {
+    position: absolute;
+    top: 0px;
+    left: 32%;
+  }
+
+  .header__basketIcon {
+    position: absolute;
+    top: 15px;
+    right: 0px;
+  }
+
+  .header__search,
+  .headerNav {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked ~ .header__search {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    background-color: #131921;
+  }
+
+  input[type="checkbox"]:checked ~ .headerNav {
+    padding-top: 10px;
+    display: flex;
+    position: absolute;
+    top: 84px;
+    width: 100%;
+    background-color: #131921;
+    height: 50px;
+  }
+}
